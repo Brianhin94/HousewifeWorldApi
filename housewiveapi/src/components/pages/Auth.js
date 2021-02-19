@@ -1,9 +1,14 @@
+import Login from '../partials/Login';
+import Signup from '../partials/Signup';
+
+
 const Auth = (props) => {
-    return (
-      <div>
-        <h1>AUTH PAGE</h1>
-      </div>
-    );
-  }
-  
-  export default Auth;
+  return (
+    <div className="auth-panel">
+      <Signup />
+      <Login />
+    </div>
+  );
+}
+
+export default Auth;
