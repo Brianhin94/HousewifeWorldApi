@@ -12,6 +12,8 @@ const Header = (props) => {
     <nav>
       <Link className="nav-link" to='/'>Home</Link>{'  |  '}
       <Link className="nav-link" to='/profile'>Account</Link>{'  |  '}
+      <Link className="nav-link" to='/Housewifemuseum'>Housewife Museum</Link>{' | '}
+      <Link className="nav-link" to='/developers'>Meet the Developers</Link>{' | '}
       <span className="nav-link" onClick={e => props.handleAuth(null)}>Logout</span>
       {/* TODO Logout link stylilng & Functionality */}
     </nav> :
