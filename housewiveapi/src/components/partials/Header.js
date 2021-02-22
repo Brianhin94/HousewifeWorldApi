@@ -1,4 +1,3 @@
-  
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
@@ -9,15 +8,24 @@ const Header = (props) => {
     padding: '1em 0'
   }
 
+  let conditionalLinks = props.currentUser ?
+    <nav>
+      <Link className="nav-link" to='/'>Home</Link>{'  |  '}
+      <Link className="nav-link" to='/profile'>Account</Link>{'  |  '}
+      <Link className="nav-link" to='/Housewifemuseum'>Housewife Museum</Link>{' | '}
+      <Link className="nav-link" to='/developers'>Meet the Developers</Link>{' | '}
+      <span className="nav-link" onClick={e => props.handleAuth(null)}>Logout</span>
+      {/* TODO Logout link stylilng & Functionality */}
+    </nav> :
+    <nav>
+      <Link className="nav-link" to='/'>Home</Link>{'  |  '}
+      <Link className="nav-link" to='/auth'>Login or Signup</Link>
+    </nav>
+
   return (
     <header style={style}>
       <h1>It's a website!</h1>
-      <nav>
-        {/* TODO: Conditional link rendering */}
-        <Link to='/'>Home</Link>{'  |  '}
-        <Link to='/auth'>Login or Signup</Link> {'  |  '}
-        <Link to='/profile'>Account</Link>
-      </nav>
+      {conditionalLinks}
     </header>
   );
 }
