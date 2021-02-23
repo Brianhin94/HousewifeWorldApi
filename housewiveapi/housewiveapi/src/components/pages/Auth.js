@@ -7,7 +7,6 @@ const Auth = (props) => {
            <Signup handleAuth={props.handleAuth} />
            <Login handleAuth={props.handleAuth} />
         </div>
-
     );
 }
 
