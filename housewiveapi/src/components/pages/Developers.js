@@ -1,11 +1,11 @@
 const Developers = (props) => {
     return (
-        <div>
+        <div className="dev-container">
             <h1 className="devs">Meet The Developers!</h1>
             <div className="meet-devs">
-                <h3><span>Katie Mackenbrock</span></h3>
-                <h3><span>Ian Jacobs</span></h3>
-                <h3><span>Brian Hinchey</span></h3>
+                <h3>Katie Mackenbrock</h3>
+                <h3>Ian Jacobs</h3>
+                <h3>Brian Hinchey</h3>
             </div>
         </div>
     );

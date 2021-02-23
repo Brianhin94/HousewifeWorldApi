@@ -33,13 +33,17 @@ code {
   justify-content: space-around;
 }
 
-.devs {
+.dev-container {
   text-align: center;
 }
 
+/* .devs {
+  display: flex;
+  justify-content: space-around;
+} */
+
 .meet-devs {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
