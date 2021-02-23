@@ -24,7 +24,7 @@ const Header = (props) => {
 
   return (
     <header style={style}>
-      <h1>It's a website!</h1>
+      <h1>Housewife Museum</h1>
       {conditionalLinks}
     </header>
   );

@@ -29,6 +29,17 @@ code {
 .auth-panel {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.devs {
+  text-align: center;
+}
+
+.meet-devs {
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
 }
 
