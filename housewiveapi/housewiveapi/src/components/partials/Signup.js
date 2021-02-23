@@ -17,7 +17,7 @@ const Signup = (props) => {
         console.log(process.env.REACT_APP_SERVER_URL)
 
         axios.post(
-            `${process.env.REACT_APP_SERVER_URL}/api/signup`,
+            `http://localhost:3001/api/signup`,
             { name, email, password }
         ).then(response => {
             console.log(response.data)
