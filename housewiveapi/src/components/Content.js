@@ -4,7 +4,15 @@ import Auth from './pages/Auth';
 import Profile from './pages/Profile';
 import Housewifemuseum from './pages/HousewifeMuseum';
 import Developers from './pages/Developers';
-import HousewifeCity from './pages/HousewifeCity';
+// Cities
+import Potomac from './pages/Cities/Potomac';
+import OrangeCounty from './pages/Cities/OrangeCounty';
+import Atlanta from './pages/Cities/Atlanta';
+import NewYork from './pages/Cities/NewYork';
+import NewJersey from './pages/Cities/NewJersey';
+import SaltlakeCity from './pages/Cities/SaltlakeCIty';
+import BeverlyHills from './pages/Cities/BeverlyHills';
+import Dallas from './pages/Cities/Dallas';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
     const token = localStorage.getItem('jwtToken');
@@ -23,7 +31,14 @@ const Content = (props) => {
                 <Auth handleAuth={props.handleAuth} {...renderprops} />
             )} />
             <Route path ='/Housewifemuseum' component={Housewifemuseum} />
-            <Route path='Housewifecity' component={HousewifeCity} />
+            <Route path='/Cities/Potomac' component={Potomac} />
+            <Route path='/Cities/OrangeCounty' component={OrangeCounty} />
+            <Route path='/Cities/Atlanta' component={Atlanta} />
+            <Route path='/Cities/NewYork' component={NewYork} />
+            <Route path='/Cities/NewJersey' component={NewJersey} />
+            <Route path='/Cities/SaltlakeCity' component={SaltlakeCity} />
+            <Route path='/Cities/BeverlyHills' component={BeverlyHills} />
+            <Route path='/Cities/Dallas' component={Dallas} />
             <Route path='/developers' component={Developers} />
             <PrivateRoute path='/profile' component={Profile} currentUser={props.currentUser} handleAuth={props.handleAuth} />
             {/* <Route path='/profile' render={(renderProps) => (

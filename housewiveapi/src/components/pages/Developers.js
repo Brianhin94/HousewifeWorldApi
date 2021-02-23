@@ -1,6 +1,13 @@
 const Developers = (props) => {
     return (
-        <h1>Meet The Developers!</h1>
+        <div>
+            <h1 className="devs">Meet The Developers!</h1>
+            <div className="meet-devs">
+                <h3><span>Katie Mackenbrock</span></h3>
+                <h3><span>Ian Jacobs</span></h3>
+                <h3><span>Brian Hinchey</span></h3>
+            </div>
+        </div>
     );
 }
 
