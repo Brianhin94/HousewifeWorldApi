@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import image from '../images/bravo.png';
 
 const Header = (props) => {
+  let bravo = '../components/images/bravo.png';
+
   let style = {
     backgroundColor: '#393F49',
     color: 'white',
@@ -14,7 +15,7 @@ const Header = (props) => {
     <nav>
       <div className="nav-primary">
         <Link className="nav-link" to='/'>
-          <img src={image} className="home-img" />
+          <img src={bravo} className="home-img" />
         </Link>{'  |  '}
         <Link className="nav-link" to='/profile'>Account</Link>{'  |  '}
         <Link className="nav-link" to='/Housewifemuseum'>Housewife Museum</Link>{' | '}
@@ -24,7 +25,7 @@ const Header = (props) => {
       {/* TODO Logout link stylilng & Functionality */}
     </nav> :
     <nav className="nav-preauth">
-      <Link className="nav-link" to='/'><img src={image} className="home-img" /></Link>{'  |  '}
+      <Link className="nav-link" to='/'><img src={bravo} className="home-img" /></Link>{'  |  '}
       <Link className="nav-link" to='/auth'>Login or Signup</Link>
     </nav>
 
