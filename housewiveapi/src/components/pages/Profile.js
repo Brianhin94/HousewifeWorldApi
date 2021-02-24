@@ -20,7 +20,8 @@ const Profile = (props) => {
     if (!props.currentUser) return <Redirect to='/auth' />
     return (
         <div>
-            <h1>PROFILE PAGE</h1>
+            {/* <h1>WELCOME TO YOUR PROFILE PAGE, FUTURE HOUSEWIFE.</h1> */}
+            <h2>Yeah, I'm talking to you!</h2>
             <h4>{message}</h4>
         </div>
     );
