@@ -1,7 +1,8 @@
 // import img from '../images/bravomap.png';
-import crown from '../images/crown.png';
+
 
 const Housewifemuseum = (props) => {
+    let crown = '../images/crown.png';
     return (
         <div className="container">
             <h1>Welcome to the Real Museum of Real Housewives</h1>
