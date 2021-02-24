@@ -31,6 +31,7 @@ code {
   height: 70px;
   padding: 0 20px;
   position: relative;
+  padding-right: 30px;
 }
 
 .nav-preauth {
@@ -62,3 +63,63 @@ code {
   width: 65px;
   height: 49px;
 }
+
+/* .auth-btn {
+  color: #000;
+  border-radius: 15.5px;
+  background: #fff;
+  padding: 7px 18px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 25px;
+  letter-spacing: -.2px;
+  cursor: pointer;
+} */
+
+.crown-atlanta {
+  height: 20px;
+  width: 25px;
+}
+
+/* .crown-bh {
+  display: flex;
+  height: 20px;
+  width: 25px;
+}
+
+.crown-dallas {
+  display: flex;
+  height: 20px;
+  width: 25px;
+}
+
+.crown-nj {
+  display: flex;
+  height: 20px;
+  width: 25px;
+}
+
+.crown-ny {
+  display: flex;
+  height: 20px;
+  width: 25px;
+}
+
+.crown-oc {
+  display: flex;
+  height: 20px;
+  width: 25px;
+}
+
+.crown-potomac {
+  display: flex;
+  height: 20px;
+  width: 25px;
+}
+
+.crown-slc {
+  display: flex;
+  height: 20px;
+  width: 25px;
+} */ 
