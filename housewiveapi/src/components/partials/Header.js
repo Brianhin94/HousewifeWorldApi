@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image from '../images/bravo.jpg';
+import image from '../images/bravo.png';
 
 const Header = (props) => {
   let style = {
@@ -25,14 +25,11 @@ const Header = (props) => {
     </nav> :
     <nav className="nav-preauth">
       <Link className="nav-link" to='/'><img src={image} className="home-img" /></Link>{'  |  '}
-      <button placeholder="Sign Up/Log In">
-        <Link className="nav-link" to='/auth'>Login or Signup</Link>
-      </button>
+      <Link className="nav-link" to='/auth'>Login or Signup</Link>
     </nav>
 
   return (
     <header style={style}>
-      <h1>Housewife Museum</h1>
       {conditionalLinks}
     </header>
   );
