@@ -8,11 +8,11 @@ const NewYork = (props) => {
     useEffect(() => {
         console.log(bravoUrl)
         fetch(bravoUrl)
-        .then(response => response.json())
-        .then(jsonData => {
-            setYork((jsonData))
-            console.log(jsonData)
-        })
+            .then(response => response.json())
+            .then(jsonData => {
+                setYork((jsonData))
+                console.log(jsonData)
+            })
     }, [])
 
     if (york.length < 1) {
@@ -20,19 +20,20 @@ const NewYork = (props) => {
     } else {
         let content = york.db.map((nycWives, i) => {
             return (
-                <li key={`nycWives-${i}`}> {nycWives.first_name} {nycWives.last_name} <img src={nycWives.img_url}/></li>
-        )})
-    
+                <li className="nycWivesList" key={`nycWives-${i}`}> <img className="nycWivesImg" src={nycWives.img_url} /> {nycWives.first_name} {nycWives.last_name} </li>
+            )
+        })
 
-    return (
-        <div>
-            <h1>New York, NY</h1>
-            <ul className="city-wives">
-                {content}
-            </ul>
-        </div>
-    )
-  }
+
+        return (
+            <div>
+                <h1>The Real Housewives of New York City</h1>
+                <ul className="city-wives">
+                    {content}
+                </ul>
+            </div>
+        )
+    }
 };
 
 export default NewYork;

@@ -20,13 +20,13 @@ const BeverlyHills = (props) => {
     } else {
         let content = beverly.db.map((bevWives, i) => {
             return (
-                <li key={`bevWives-${i}`}> {bevWives.first_name} {bevWives.last_name} <img src={bevWives.img_url}/> </li>
+                <li className="bevWivesList" key={`bevWives-${i}`}> <img className="bevWivesImg" src={bevWives.img_url}/> {bevWives.first_name} {bevWives.last_name}  </li>
         )})
     
 
     return (
         <div>
-            <h1>Beverly Hills, CA</h1>
+            <h1>The Real Housewives of Beverly Hills</h1>
             <ul className="city-wives">
                 {content}
             </ul>
