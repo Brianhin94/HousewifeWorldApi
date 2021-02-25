@@ -20,7 +20,7 @@ const NewJersey = (props) => {
     } else {
         let content = jersey.db.map((jerseyWives, i) => {
             return (
-                <li key={`jerseyWives-${i}`}> {jerseyWives.first_name} {jerseyWives.last_name}</li>
+                <li key={`jerseyWives-${i}`}> {jerseyWives.first_name} {jerseyWives.last_name} <img src={jerseyWives.img_url}/></li>
         )})
     
 

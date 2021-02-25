@@ -1,8 +1,8 @@
-// import img from '../images/bravomap.png';
+import { Link } from 'react-router-dom';
 
 
 const Housewifemuseum = (props) => {
-    let crown = '../images/crown.png';
+    let crown = '/images/crown.png';
     return (
         <div className="container">
             <h1>Welcome to the Real Museum of Real Housewives</h1>
@@ -14,14 +14,14 @@ const Housewifemuseum = (props) => {
             </div>
             <div className="home-cities">
                 <ul className="cities-list">
-                    <li><img className="bullet" src={crown} /> The Real Housewives of Atlanta</li>
-                    <li><img className="bullet" src={crown} />The Real Housewives of Beverly Hills</li>
-                    <li><img className="bullet" src={crown} />The Real Housewives of Dallas</li>
-                    <li><img className="bullet" src={crown} />The Real Housewives of New Jersey</li>
-                    <li><img className="bullet" src={crown} />The Real Housewives of New York</li>
-                    <li><img className="bullet" src={crown} />The Real Housewives of Orange County</li>
-                    <li><img className="bullet" src={crown} />The Real Housewives of Potomac</li>
-                    <li><img className="bullet" src={crown} />The Real Housewives of Salt Lake City</li>
+                    <Link className="city-list" to='/cities/dallas'><img className="bullet" src={crown} />The Real Housewives of Dallas</Link>
+                    <Link className="city-list" to='/cities/newjersey'><img className="bullet" src={crown} />The Real Housewives of New Jersey</Link>
+                    <Link className="city-list" to='/cities/beverlyhills'><img className="bullet" src={crown} />The Real Housewives of Beverly Hills</Link>
+                    <Link className="city-list" to='/cities/newyork'><img className="bullet" src={crown} />The Real Housewives of New York City</Link>
+                    <Link className="city-list" to='/cities/orangecounty'><img className="bullet" src={crown} />The Real Housewives of Orange County</Link>
+                    <Link className="city-list" to='/cities/potomac'><img className="bullet" src={crown} />The Real Housewives of Potomac</Link>
+                    <Link className="city-list" to='/cities/atlanta'><img className="bullet" src={crown} /> The Real Housewives of Atlanta</Link>
+                    <Link className="city-list" to='/cities/saltlakecity'><img className="bullet" src={crown} />The Real Housewives of Salt Lake City</Link>
                 </ul>
             </div>
             {/* <div className="crown-atlanta">
