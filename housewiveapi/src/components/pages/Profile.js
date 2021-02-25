@@ -1,6 +1,8 @@
+import userEvent from '@testing-library/user-event';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
+
 
 
 const Profile = (props) => {
@@ -23,6 +25,7 @@ const Profile = (props) => {
             {/* <h1>WELCOME TO YOUR PROFILE PAGE, FUTURE HOUSEWIFE.</h1> */}
             <h2>Yeah, I'm talking to you!</h2>
             <h4>{message}</h4>
+            <h5> your favorites are {this.props.Fave}</h5>
         </div>
     );
 }
