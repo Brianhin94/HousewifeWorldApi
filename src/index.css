@@ -81,6 +81,11 @@ code {
 
 ul.cities-list {
   list-style: none;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
 }
 
 .bullet {
@@ -97,27 +102,130 @@ ul.cities-list {
   list-style: none;
 }
 
-/* .atlWivesImg {
-  width: 250px;
-  height: 250px;
-} */
+.atlWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
 
-/* .bevWivesImg {
-  width: 300px;
-  height: 450px;
-} */
+.atlWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
 
-/* .dalWivesImg {
-  width: 300px;
-  height: 450px;
-} */
+.bevWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
 
-/* .jerseyWivesImg {
-  width: 350px;
-  height: 350px;
-} */
+.bevWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
 
-/* .nycWivesImg {
-  width: 350px;
-  height: 600px;
-} */
+.dalWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.dalWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.jerseyWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.jerseyWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.nycWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.nycWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.ocWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.ocWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.potWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.potWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.slcWivesList {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
+
+.slcWivesImg {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: column;
+}
