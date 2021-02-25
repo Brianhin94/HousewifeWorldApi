@@ -20,13 +20,13 @@ const OrangeCounty = (props) => {
     } else {
         let content = orange.db.map((ocWives, i) => {
             return (
-                <li key={`ocWives-${i}`}> {ocWives.first_name} {ocWives.last_name} <img src={ocWives.img_url}/></li>
+                <li className="ocWivesList" key={`ocWives-${i}`}> <img className="ocWivesImg" src={ocWives.img_url}/> {ocWives.first_name} {ocWives.last_name} </li>
         )})
     
 
     return (
         <div>
-            <h1>Orange County, CA</h1>
+            <h1>The Real Housewives of Orange County</h1>
             <ul className="city-wives">
                 {content}
             </ul>

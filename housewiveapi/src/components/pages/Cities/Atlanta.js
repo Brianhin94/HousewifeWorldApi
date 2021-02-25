@@ -20,13 +20,13 @@ const Atlanta = (props) => {
     } else {
         let content = atlanta.db.map((atlWives, i) => {
             return (
-                <li className="atlWivesList" key={`atlWives-${i}`}> {atlWives.first_name} {atlWives.last_name} <img className="atlWivesImg" src={atlWives.img_url}/></li>
+                <li className="atlWivesList" key={`atlWives-${i}`}> <img className="atlWivesImg" src={atlWives.img_url}/> {atlWives.first_name} {atlWives.last_name} </li>
         )})
     
 
     return (
         <div>
-            <h1>Atlanta, GA</h1>
+            <h1>The Real Housewives of Atlanta</h1>
             <ul className="city-wives">
                 {content}
             </ul>
