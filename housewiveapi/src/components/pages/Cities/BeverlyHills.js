@@ -20,7 +20,7 @@ const BeverlyHills = (props) => {
     } else {
         let content = beverly.db.map((bevWives, i) => {
             return (
-                <li key={`bevWives-${i}`}> {bevWives.first_name} {bevWives.last_name}</li>
+                <li key={`bevWives-${i}`}> {bevWives.first_name} {bevWives.last_name} <img src={bevWives.img_url}/> </li>
         )})
     
 

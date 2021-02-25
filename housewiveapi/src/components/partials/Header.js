@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
-  let bravo = '../components/images/bravo.png';
+  let bravo = '/images/bravo.png';
 
   let style = {
     backgroundColor: '#393F49',
