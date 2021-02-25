@@ -93,6 +93,10 @@ ul.cities-list {
   width: 25px;
 }
 
+.city-wives {
+  list-style: none;
+}
+
 /* .crown-bh {
   display: flex;
   height: 20px;

@@ -10,14 +10,29 @@ const Potomac = (props) => {
         fetch(bravoUrl)
         .then(response => response.json())
         .then(jsonData => {
-            setPotomac(Object.values(jsonData))
+            setPotomac((jsonData))
             console.log(jsonData)
         })
     }, [])
 
+    if (potomac.length < 1) {
+        return (<h4>Content is loading</h4>)
+    } else {
+        let content = potomac.db.map((potWives, i) => {
+            return (
+                <li key={`potWives-${i}`}> {potWives.first_name} {potWives.last_name}</li>
+        )})
+    
+
     return (
-        <h1>Potomac</h1>
-    );
-}
+        <div>
+            <h1>Potomac, MD</h1>
+            <ul className="city-wives">
+                {content}
+            </ul>
+        </div>
+    )
+  }
+};
 
 export default Potomac;

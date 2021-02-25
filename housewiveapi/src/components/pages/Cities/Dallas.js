@@ -10,14 +10,29 @@ const Dallas = (props) => {
         fetch(bravoUrl)
         .then(response => response.json())
         .then(jsonData => {
-            setDallas(Object.values(jsonData))
+            setDallas((jsonData))
             console.log(jsonData)
         })
     }, [])
 
+    if (dallas.length < 1) {
+        return (<h4>Content is loading</h4>)
+    } else {
+        let content = dallas.db.map((dalWives, i) => {
+            return (
+                <li key={`dalWives-${i}`}> {dalWives.first_name} {dalWives.last_name}</li>
+        )})
+    
+
     return (
-        <h1>Dallas, TX</h1>
-    );
-}
+        <div>
+            <h1>Dallas, TX</h1>
+            <ul className="city-wives">
+                {content}
+            </ul>
+        </div>
+    )
+  }
+};
 
 export default Dallas;

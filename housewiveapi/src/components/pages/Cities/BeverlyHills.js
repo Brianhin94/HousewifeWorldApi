@@ -10,14 +10,29 @@ const BeverlyHills = (props) => {
         fetch(bravoUrl)
         .then(response => response.json())
         .then(jsonData => {
-            setBeverly(Object.values(jsonData))
+            setBeverly((jsonData))
             console.log(jsonData)
         })
     }, [])
 
+    if (beverly.length < 1) {
+        return (<h4>Content is loading</h4>)
+    } else {
+        let content = beverly.db.map((bevWives, i) => {
+            return (
+                <li key={`bevWives-${i}`}> {bevWives.first_name} {bevWives.last_name}</li>
+        )})
+    
+
     return (
-        <h1>Beverly Hills, CA</h1>
-    );
-}
+        <div>
+            <h1>Beverly Hills, CA</h1>
+            <ul className="city-wives">
+                {content}
+            </ul>
+        </div>
+    )
+  }
+};
 
 export default BeverlyHills;
