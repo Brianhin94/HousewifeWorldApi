@@ -10,14 +10,29 @@ const NewJersey = (props) => {
         fetch(bravoUrl)
         .then(response => response.json())
         .then(jsonData => {
-            setJersey(Object.values(jsonData))
+            setJersey((jsonData))
             console.log(jsonData)
         })
     }, [])
 
+    if (jersey.length < 1) {
+        return (<h4>Content is loading</h4>)
+    } else {
+        let content = jersey.db.map((jerseyWives, i) => {
+            return (
+                <li key={`jerseyWives-${i}`}> {jerseyWives.first_name} {jerseyWives.last_name}</li>
+        )})
+    
+
     return (
-        <h1>New Jersey</h1>
-    );
-}
+        <div>
+            <h1>New Jersey</h1>
+            <ul className="city-wives">
+                {content}
+            </ul>
+        </div>
+    )
+  }
+};
 
 export default NewJersey;

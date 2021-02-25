@@ -10,14 +10,29 @@ const NewYork = (props) => {
         fetch(bravoUrl)
         .then(response => response.json())
         .then(jsonData => {
-            setYork(Object.values(jsonData))
+            setYork((jsonData))
             console.log(jsonData)
         })
     }, [])
 
+    if (york.length < 1) {
+        return (<h4>Content is loading</h4>)
+    } else {
+        let content = york.db.map((nycWives, i) => {
+            return (
+                <li key={`nycWives-${i}`}> {nycWives.first_name} {nycWives.last_name}</li>
+        )})
+    
+
     return (
-        <h1>New York, NY</h1>
-    );
-}
+        <div>
+            <h1>New York, NY</h1>
+            <ul className="city-wives">
+                {content}
+            </ul>
+        </div>
+    )
+  }
+};
 
 export default NewYork;
