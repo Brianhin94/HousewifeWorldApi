@@ -50,6 +50,27 @@ code {
 .devs {
   text-align: center;
   font-size: 60px;
+  /* margin-bottom: 30px; */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 10px auto 30px; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 9s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 .meet-devs {
   display: flex;
@@ -57,7 +78,7 @@ code {
   justify-content: space-around;
 }
 .devPar {
-  font-size: 20
+  font-size: 20px;
 }
 
 
@@ -88,6 +109,7 @@ code {
   font-weight: bold;
   font-size: 50px;
 }
+
 .main-instruct {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
@@ -110,10 +132,16 @@ ul.cities-list {
   flex-wrap: wrap;
   flex-direction: row;
   flex-direction: column;
+  flex: auto;
 }
+
+.list {
+  font-size: 20px;
+}
+
 .bullet {
-  width: 40px;
-  height: 40px;
+  width: 75px;
+  height: 75px;
 }
 .crown-atlanta {
   height: 20px;
@@ -133,6 +161,7 @@ ul.cities-list {
   /* flex-direction: column; */
   overflow: auto;
 }
+
 
 .city-wives {
   /* margin: auto; */
@@ -277,7 +306,7 @@ ul.cities-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 5px auto 25px;
   width: 140px;
   height: 40px;
   font-family: 'Poppins', sans-serif;
@@ -285,17 +314,24 @@ ul.cities-list {
   color: white;
 }
 
+.wifeName {
+  font-weight: normal;
+  font-size: 20px;
+}
+
 .vidIntroPanel {
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
-  margin: 0 auto;
+  margin: 0px auto 10px;
 }
 
 .vid {
   margin-left: 150px;
   margin-right: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .authVid {
@@ -306,4 +342,25 @@ ul.cities-list {
 
 .authWelcome {
   font-size: 75px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 9s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #DDF5FF; }
+}
+

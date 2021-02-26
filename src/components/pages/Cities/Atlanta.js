@@ -36,7 +36,7 @@ const Atlanta = (props) => {
                             <Fave />
                         </div>
                     )} 
-                    {atlWives.first_name} {atlWives.last_name} 
+                    <p className="wifeName">{atlWives.first_name} {atlWives.last_name}</p>
                     <form method="POST" action="/profile">
                         <input hidden type="text" name="first_name" value="{atlWives.first_name}"/>
                         <input hidden type="text" name="last_name" value="{atlWives.last_name"/>
@@ -58,7 +58,12 @@ const Atlanta = (props) => {
                         />
                     </div>
                     <div className="cityIntro">
-                        <h2 className="welcomeCity">Welcome to Atlanta. This franchise first premiered on Bravo in October of 2008, and our lives have never been the same.</h2>
+                        <h2 className="welcomeCity"><b>Welcome to Atlanta. This franchise first premiered on Bravo in October of 2008, and our lives have never been the same.</b></h2>
+                        <h3 className="welcomeCity">🍑 BLOOP</h3>
+                        <h3 className="welcomeCity">🍑 BYE WIG</h3>
+                        <h3 className="welcomeCity">🍑 DON'T BE TARDY TO THE PARTY</h3>
+                        <h3 className="welcomeCity">🍑 WHO F*CKED BOLO?!</h3>
+                        <h4 className="welcomeCity"><i>Porsha: We're looking at you, girl.</i></h4>
                     </div>
                 </div>
                 <div className="grid">

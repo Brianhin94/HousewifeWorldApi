@@ -23,8 +23,7 @@ const OrangeCounty = (props) => {
             return (
                 <li className="ocWivesList" key={`ocWives-${i}`}> 
                     <img className="ocWivesImg" src={ocWives.img_url} /> 
-                    {ocWives.first_name} 
-                    {ocWives.last_name} 
+                    <p className="wifeName">{ocWives.first_name} {ocWives.last_name}</p>
                     <form method="POST" action="/profile">
                         <input hidden type="text" name="first_name" value="{ocWives.first_name}"/>
                         <input hidden type="text" name="last_name" value="{ocWives.last_name"/>
@@ -46,7 +45,7 @@ const OrangeCounty = (props) => {
                         />
                     </div>
                     <div className="cityIntro">
-                        <h2 className="welcomeCity">Welcome to Orange County. This was the first Real Housewives franchise ever. It premiered on Bravo in March of 2006, and we hate to admit it, but we miss Tamra.</h2>
+                        <h2 className="welcomeCity"><b>Welcome to Orange County. This was the first Real Housewives franchise ever. It premiered on Bravo in March of 2006, and we hate to admit it, but we miss Tamra.</b></h2>
                         <h3 className="welcomeCity">🍊 OC: Where nobody should get stuck in a family van.</h3>
                         <h4 className="welcomeCity"><i>Or anywhere with K*lly D*dd, for that matter.</i></h4>
                         <h3 className="welcomeCity">🍊 Where the boob jobs and drama are endless, but the friendships are not.</h3>

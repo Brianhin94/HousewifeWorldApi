@@ -1,21 +1,21 @@
 const Developers = (props) => {
     let katie = '/images/kt.png';
     let ian = '/images/ian.png';
-    let brian = '/brian/bravo.png';
+    let brian = '/images/brian.png';
     return (
         <div>
-            <h1 className="devs">Meet The Developers!</h1>
+            <h1 className="devs">Meet The Developers!</h1><br></br>
             <div className="meet-devs">
+                <div className="oneDev">
+                    <img src={ian} className="devPic" />
+                    <h1><span>Ian Jacobs</span></h1>
+                    <p className="devPar">Super bitchin dude. Check him out on <a href="https://www.linkedin.com/in/ianjacobs925/" target="_blank">LinkedIn</a>.</p>
+                </div>
                 <div className="oneDev">
                     <img src={katie} className="devPic" />
                     <h1><span>Katie Mackenbrock</span></h1>
                     <p className="devPar">The best future housewife you'll ever meet. Check her out on <a href="https://www.linkedin.com/in/katiemackenbrock/" target="_blank">LinkedIn</a>.</p>
                     <p className="devPar">Check out her submission for a brand new Bravo show, VanderKatie Rules, <a href="https://www.instagram.com/p/CACS8JpjEgH/" target="_blank">here</a>.</p>
-                </div>
-                <div className="oneDev">
-                    <img src={ian} className="devPic" />
-                    <h1><span>Ian Jacobs</span></h1>
-                    <p className="devPar">Super bitchin dude. Check him out on <a href="https://www.linkedin.com/in/ianjacobs925/" target="_blank">LinkedIn</a>.</p>
                 </div>
                 <div className="oneDev">
                     <img src={brian} className="devPic" />

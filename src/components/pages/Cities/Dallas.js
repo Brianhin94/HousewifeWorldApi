@@ -23,8 +23,7 @@ const Dallas = (props) => {
             return (
                 <li className="dalWivesList" key={`dalWives-${i}`}> 
                     <img className="dalWivesImg" src={dalWives.img_url} /> 
-                    {dalWives.first_name} 
-                    {dalWives.last_name} 
+                    <p className="wifeName">{dalWives.first_name} {dalWives.last_name}</p>
                     <form method="POST" action="/profile">
                         <input hidden type="text" name="first_name" value="{dalWives.first_name}"/>
                         <input hidden type="text" name="last_name" value="{dalWives.last_name"/>
@@ -46,7 +45,7 @@ const Dallas = (props) => {
                         />
                     </div>
                     <div className="cityIntro">
-                        <h2 className="welcomeCity">Welcome to Dallas, y'all. This franchise first premiered on Bravo in April of 2016, and these ladies have not let us down.</h2>
+                        <h2 className="welcomeCity"><b>Welcome to Dallas, y'all. This franchise first premiered on Bravo in April of 2016, and these ladies have not let us down.</b></h2>
                     </div>
                 </div>
                 <div className="grid">

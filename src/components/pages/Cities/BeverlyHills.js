@@ -34,8 +34,7 @@ const BeverlyHills = (props) => {
                         onMouseOver={handleMouseOver}
                         />
                         {<Fave />}
-                    {bevWives.first_name}
-                    {bevWives.last_name}
+                        <p className="wifeName"> {bevWives.first_name} {bevWives.last_name}</p>
                     <form method="POST" action="/profile">
                         <input hidden type="text" name="first_name" value="{bevWives.first_name}" />
                         <input hidden type="text" name="last_name" value="{bevWives.last_name" />
@@ -57,11 +56,11 @@ const BeverlyHills = (props) => {
                         />
                     </div>
                     <div className="cityIntro">
-                        <h2 className="welcomeCity">Welcome to Beverly Hills, dahhling (said in LVP voice, of course). This franchise first premiered on Bravo in October of 2010, and our lives have never been the same.</h2>
+                        <h2 className="welcomeCity"><b>Welcome to Beverly Hills, dahhling (said in LVP voice, of course). This franchise first premiered on Bravo in October of 2010, and our lives have never been the same.</b></h2>
                         <h3 className="welcomeCity">💎 From Kyle stealing Kim's god damn house, to things getting a little too real inside Taylor Armstrong's world.</h3>
                         <h3 className="welcomeCity">💎 From feeling sorry for "slut pig" Brandi Glanville to wanting her permanently off our screens.</h3>
                         <h3 className="welcomeCity">💎 From loving our favorite duo, to GOODBYE KYLE.</h3>
-                        <h3 className="welcomeCity">💎 And let's not forget Lucy Lucy Apple Goosey and wondering if Denise Richards really did f*ck Brandi Glanville.</h3>
+                        <h3 className="welcomeCity">💎 And let's not forget Lucy Lucy Apple Juicy, or wondering if Denise Richards really did f*ck Brandi Glanville.</h3>
                         <h3 className="welcomeCity">💎 These ladies have given us all the glam, drama, and then some.</h3>
                     </div>
                 </div>
