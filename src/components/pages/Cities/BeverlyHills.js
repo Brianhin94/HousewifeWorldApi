@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
+import Fave from '../../Fave';
 
 const BeverlyHills = (props) => {
+    const handleMouseOver = (event) => {
+        console.log(JSON.parse(event.target.dataset.info));
+    };
 
     const [beverly, setBeverly] = useState([]);
     const bravoUrl = (`${process.env.REACT_APP_BRAVO_API}searchcity?city=Beverly Hills`)
@@ -21,17 +25,23 @@ const BeverlyHills = (props) => {
     } else {
         let content = beverly.db.map((bevWives, i) => {
             return (
-                <li className="bevWivesList" key={`bevWives-${i}`}> 
-                    <img className="bevWivesImg" src={bevWives.img_url} /> 
-                    {bevWives.first_name} 
-                    {bevWives.last_name} 
+                <li className="bevWivesList" key={`bevWives-${i}`}>
+                    <img 
+                        className="bevWivesImg" 
+                        src={bevWives.img_url} 
+                        key={i}
+                        data-info={JSON.stringify(bevWives)}
+                        onMouseOver={handleMouseOver}
+                        />
+                        {<Fave />}
+                        <p className="wifeName"> {bevWives.first_name} {bevWives.last_name}</p>
                     <form method="POST" action="/profile">
-                        <input hidden type="text" name="first_name" value="{bevWives.first_name}"/>
-                        <input hidden type="text" name="last_name" value="{bevWives.last_name"/>
-                        <input hidden type="text" name="img_url" value="{bevWives.img_url}"/>
+                        <input hidden type="text" name="first_name" value="{bevWives.first_name}" />
+                        <input hidden type="text" name="last_name" value="{bevWives.last_name" />
+                        <input hidden type="text" name="img_url" value="{bevWives.img_url}" />
                         <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
-                    </form> 
-            </li>
+                    </form>
+                </li>
             )
         })
 
@@ -46,11 +56,11 @@ const BeverlyHills = (props) => {
                         />
                     </div>
                     <div className="cityIntro">
-                        <h2 className="welcomeCity">Welcome to Beverly Hills, dahhling (said in LVP voice, of course). This franchise first premiered on Bravo in October of 2010, and our lives have never been the same.</h2>
+                        <h2 className="welcomeCity"><b>Welcome to Beverly Hills, dahhling (said in LVP voice, of course). This franchise first premiered on Bravo in October of 2010, and our lives have never been the same.</b></h2>
                         <h3 className="welcomeCity">💎 From Kyle stealing Kim's god damn house, to things getting a little too real inside Taylor Armstrong's world.</h3>
                         <h3 className="welcomeCity">💎 From feeling sorry for "slut pig" Brandi Glanville to wanting her permanently off our screens.</h3>
                         <h3 className="welcomeCity">💎 From loving our favorite duo, to GOODBYE KYLE.</h3>
-                        <h3 className="welcomeCity">💎 And let's not forget Lucy Lucy Apple Goosey and wondering if Denise Richards really did f*ck Brandi Glanville.</h3>
+                        <h3 className="welcomeCity">💎 And let's not forget Lucy Lucy Apple Juicy, or wondering if Denise Richards really did f*ck Brandi Glanville.</h3>
                         <h3 className="welcomeCity">💎 These ladies have given us all the glam, drama, and then some.</h3>
                     </div>
                 </div>

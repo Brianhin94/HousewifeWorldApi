@@ -23,8 +23,7 @@ const Potomac = (props) => {
             return (
                 <li className="potWivesList" key={`potWives-${i}`}> 
                     <img className="potWivesImg" src={potWives.img_url} /> 
-                    {potWives.first_name} 
-                    {potWives.last_name} 
+                    <p className="wifeName">{potWives.first_name} {potWives.last_name}</p>
                     <form method="POST" action="/profile">
                         <input hidden type="text" name="first_name" value="{potWives.first_name}"/>
                         <input hidden type="text" name="last_name" value="{potWives.last_name"/>
@@ -46,7 +45,7 @@ const Potomac = (props) => {
                         />
                     </div>
                     <div className="cityIntro">
-                        <h2 className="welcomeCity">Welcome to Potomac, where proper etiquette is a must. This franchise first premiered on Bravo in January of 2016, and if you are not #TEAMMONIQUE, you can see yourself out.</h2>
+                        <h2 className="welcomeCity"><b>Welcome to Potomac, where proper etiquette is a must. This franchise first premiered on Bravo in January of 2016, and if you are not #TEAMMONIQUE, you can see yourself out.</b></h2>
                         <h3 className="welcomeCity">🥂 Potomac: Where the stakes are high, but the tensions are higher.</h3>
                         <h3 className="welcomeCity">🥂 Where we hold our own press conferences to address drama, and also run at people with butter knives.</h3>
                         <h3 className="welcomeCity">🥂 Where everybody thinks they can host a gala, but very few actually can.</h3>
