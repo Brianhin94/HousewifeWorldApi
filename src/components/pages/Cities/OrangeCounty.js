@@ -20,7 +20,7 @@ const OrangeCounty = (props) => {
     } else {
         let content = orange.db.map((ocWives, i) => {
             return (
-                <li className="ocWivesList" key={`ocWives-${i}`}> <img className="ocWivesImg" src={ocWives.img_url}/> {ocWives.first_name} {ocWives.last_name} </li>
+                <li className="ocWivesList" key={`ocWives-${i}`}> <img className="ocWivesImg" src={ocWives.img_url}/> {ocWives.first_name} {ocWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
         )})
     
 

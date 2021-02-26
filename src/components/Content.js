@@ -25,12 +25,12 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 const Content = (props) => {
     return (
         <main>
-            <Route exact path='/Housewifemuseum' component={Housewifemuseum} />
+            
+            <Route exact path ='/Housewifemuseum' render={(renderProps) => (
+                <Housewifemuseum handleAuth={props.handleAuth} {...renderProps} />
+            )}/>
             <Route path='/auth' render={(renderprops) => (
                 <Auth handleAuth={props.handleAuth} {...renderprops} />
-            )}/>
-            <Route path ='/Housewifemuseum' render={(renderProps) => (
-                <Housewifemuseum handleAuth={props.handleAuth} {...renderProps} />
             )}/>
             <Route path='/Cities/Potomac' component={Potomac} />
             <Route path='/Cities/OrangeCounty' component={OrangeCounty} />

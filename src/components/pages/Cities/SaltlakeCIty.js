@@ -20,7 +20,7 @@ const SaltlakeCity = (props) => {
     } else {
         let content = salt.db.map((slcWives, i) => {
             return (
-                <li className="slcWivesList" key={`slcWives-${i}`}> <img className="slcWivesImg" src={slcWives.img_url}/> {slcWives.first_name} {slcWives.last_name} </li>
+                <li className="slcWivesList" key={`slcWives-${i}`}> <img className="slcWivesImg" src={slcWives.img_url}/> {slcWives.first_name} {slcWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
         )})
     
 
