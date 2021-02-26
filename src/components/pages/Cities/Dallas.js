@@ -27,7 +27,7 @@ const Dallas = (props) => {
 
 
         return (
-            <div>
+            <div className="city">
                 <h1 className="cityHead"><b>The Real Housewives of Dallas 🌟</b></h1>
                 <div className="vidIntroPanel">
                     <div className="vid">
@@ -39,9 +39,11 @@ const Dallas = (props) => {
                         <h2 className="welcomeCity">Welcome to Dallas, y'all. This franchise first premiered on Bravo in April of 2016, and these ladies have not let us down.</h2>
                     </div>
                 </div>
-                <ul className="city-wives">
-                    {content}
-                </ul>
+                <div className="grid">
+                    <ul className="city-wives">
+                        {content}
+                    </ul>
+                </div>
             </div>
         )
     }

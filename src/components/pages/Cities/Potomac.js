@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 
 const Potomac = (props) => {
 
@@ -26,11 +27,31 @@ const Potomac = (props) => {
 
 
         return (
-            <div>
-                <h1>The Real Housewives of Potomac</h1>
-                <ul className="city-wives">
-                    {content}
-                </ul>
+            <div className="city">
+                <h1 className="cityHead"><b>The Real Housewives of Potomac 🥂</b></h1>
+                <div className="vidIntroPanel">
+                    <div className="vid">
+                        <ReactPlayer
+                            url="https://www.youtube.com/watch?v=ciuqy7lKb7E"
+                        />
+                    </div>
+                    <div className="cityIntro">
+                        <h2 className="welcomeCity">Welcome to Potomac, where proper etiquette is a must. This franchise first premiered on Bravo in January of 2016, and if you are not #TEAMMONIQUE, you can see yourself out.</h2>
+                        <h3 className="welcomeCity">🥂 Potomac: Where the stakes are high, but the tensions are higher.</h3>
+                        <h3 className="welcomeCity">🥂 Where we hold our own press conferences to address drama, and also run at people with butter knives.</h3>
+                        <h3 className="welcomeCity">🥂 Where everybody thinks they can host a gala, but very few actually can.</h3>
+                        <h3 className="welcomeCity">🥂 Where the best wig wins, and WE ARE SO GLAD JUAN DIXON IS NOT HERE RIGHT NOW.</h3>
+                        <h4 className="welcomeCity"><i>*Just kidding, who doesn't want to stare at Juan all day?*</i></h4>
+                        <h3 className="welcomeCity">🥂 Where Michael Darby just can't stop grabbing mens' butts. Period. End sentence.</h3>
+                        <h3 className="welcomeCity">🥂 Where if you ask to get dragged, you better believe you're gonna get dragged, honey.</h3>
+
+                    </div>
+                </div>
+                <div className="grid">
+                    <ul className="city-wives">
+                        {content}
+                    </ul>
+                </div>
             </div>
         )
     }

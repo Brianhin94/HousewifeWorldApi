@@ -35,7 +35,7 @@ const Signup = (props) => {
         // axios.get(process.env.REACT_APP_SERVER_URL)
         // .then(response => console.log(response.data));
     }
-    if (redirect) return <Redirect to='/profile' />
+    if (redirect) return <Redirect to='/Housewifemuseum' />
     return (
         <section>
             <h2>SIGNUP</h2>

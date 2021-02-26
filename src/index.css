@@ -31,7 +31,7 @@ code {
   display: flex;
   align-items: center;
   height: 70px;
-  padding: 0 20px;
+  padding: 0px 50px;
   position: relative;
   padding-right: 30px;
 }
@@ -49,16 +49,37 @@ code {
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
 }
+
+/* .form-elem {
+  width: 50%;
+  display: inline-block;
+  min-width:200px;
+} */
 
 .devs {
   text-align: center;
+  font-size: 60px;
 }
 
 .meet-devs {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.devPar {
+  font-size: 20
+}
+
+
+.devPic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 
 .home-img {
@@ -122,12 +143,17 @@ ul.cities-list {
   width: 25px;
 }
 
+.city {
+  margin: 25px 100px 75px;
+}
+
 .grid {
   margin: auto;
   display: flex;
-  /* flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
   flex-direction: row;
-  flex-direction: column; */
+  /* flex-direction: column; */
   overflow: auto;
 }
 
@@ -137,15 +163,18 @@ ul.cities-list {
   flex: auto;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-around;
   /* flex-direction: column; */
 }
 
 .cityHead {
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .welcomeCity {
   font-weight: normal;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .atlWivesList {
@@ -162,25 +191,29 @@ ul.cities-list {
   flex-wrap: wrap;
   flex-direction: row;
   flex-direction: column;
+  border: 3px #393F49;
 }
 
 .bevWivesList {
-  /* margin: auto;
-  display: flex; */
+  margin: auto;
+  display: flex;
   flex: auto;
-  /* flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: row;
-  flex-direction: column; */
+  flex-direction: column;
+  justify-content: space-around;
 
 }
 
 .bevWivesImg {
-  /* margin: auto;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  flex-direction: column; */
+  flex-direction: column;
   flex: auto;
+  justify-content: space-around;
+  border: 3px #393F49;
 }
 
 .dalWivesList {
@@ -297,4 +330,19 @@ ul.cities-list {
   justify-content: center;
   justify-content: space-around;
   margin: 0 auto;
+}
+
+.vid {
+  margin-left: 150px;
+  margin-right: 100px;
+}
+
+.authVid {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.authWelcome {
+  font-size: 75px;
 }

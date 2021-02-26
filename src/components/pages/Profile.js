@@ -22,7 +22,7 @@ const Profile = (props) => {
         <div>
             <h1>WELCOME TO YOUR PROFILE PAGE, FUTURE HOUSEWIFE.</h1>
             <h2>Yes I'm talking to you, Queen!</h2>
-            <h4>{message}</h4>
+            {/* <h4>{message}</h4> */}
         </div>
     );
 }
