@@ -7,3 +7,4 @@ const Fave = (props) => {
 }
 
 export default Fave;
+
