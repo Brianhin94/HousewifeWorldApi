@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
+import Fave from '../../Fave';
 
 const BeverlyHills = (props) => {
+    const handleMouseOver = (event) => {
+        console.log(JSON.parse(event.target.dataset.info));
+    };
 
     const [beverly, setBeverly] = useState([]);
     const bravoUrl = (`${process.env.REACT_APP_BRAVO_API}searchcity?city=Beverly Hills`)
@@ -21,17 +25,24 @@ const BeverlyHills = (props) => {
     } else {
         let content = beverly.db.map((bevWives, i) => {
             return (
-                <li className="bevWivesList" key={`bevWives-${i}`}> 
-                    <img className="bevWivesImg" src={bevWives.img_url} /> 
-                    {bevWives.first_name} 
-                    {bevWives.last_name} 
+                <li className="bevWivesList" key={`bevWives-${i}`}>
+                    <img 
+                        className="bevWivesImg" 
+                        src={bevWives.img_url} 
+                        key={i}
+                        data-info={JSON.stringify(bevWives)}
+                        onMouseOver={handleMouseOver}
+                        />
+                        {<Fave />}
+                    {bevWives.first_name}
+                    {bevWives.last_name}
                     <form method="POST" action="/profile">
-                        <input hidden type="text" name="first_name" value="{bevWives.first_name}"/>
-                        <input hidden type="text" name="last_name" value="{bevWives.last_name"/>
-                        <input hidden type="text" name="img_url" value="{bevWives.img_url}"/>
+                        <input hidden type="text" name="first_name" value="{bevWives.first_name}" />
+                        <input hidden type="text" name="last_name" value="{bevWives.last_name" />
+                        <input hidden type="text" name="img_url" value="{bevWives.img_url}" />
                         <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
-                    </form> 
-            </li>
+                    </form>
+                </li>
             )
         })
 

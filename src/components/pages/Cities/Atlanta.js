@@ -27,7 +27,8 @@ const Atlanta = (props) => {
                     <img 
                         className="atlWivesImg" 
                         src={atlWives.img_url} 
-                        onMouseEnter={() => setIsShown(true)}
+                        key={i}
+                        onMouseOver={() => setIsShown(true)}
                         onMouseLeave={() => setIsShown(false)}
                     />
                     {isShown && (
