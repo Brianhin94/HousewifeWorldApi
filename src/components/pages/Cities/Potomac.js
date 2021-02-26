@@ -8,11 +8,11 @@ const Potomac = (props) => {
     useEffect(() => {
         console.log(bravoUrl)
         fetch(bravoUrl)
-        .then(response => response.json())
-        .then(jsonData => {
-            setPotomac((jsonData))
-            console.log(jsonData)
-        })
+            .then(response => response.json())
+            .then(jsonData => {
+                setPotomac((jsonData))
+                console.log(jsonData)
+            })
     }, [])
 
     if (potomac.length < 1) {
@@ -20,19 +20,21 @@ const Potomac = (props) => {
     } else {
         let content = potomac.db.map((potWives, i) => {
             return (
-                <li className="potWivesList" key={`potWives-${i}`}> <img className="potWivesImg" src={potWives.img_url}/> {potWives.first_name} {potWives.last_name} </li>
-        )})
-    
+                <li className="potWivesList" key={`potWives-${i}`}> <img className="potWivesImg" src={potWives.img_url} /> {potWives.first_name} {potWives.last_name} </li>
+            )
+        })
 
-    return (
-        <div>
-            <h1>Potomac, MD</h1>
-            <ul className="city-wives">
-                {content}
-            </ul>
-        </div>
-    )
-  }
+
+        return (
+            <div>
+                <h1>The Real Housewives of Potomac</h1>
+                <ul className="city-wives">
+                    {content}
+                </ul>
+            </div>
+        )
+    }
+
 };
 
 export default Potomac;
