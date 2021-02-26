@@ -27,7 +27,7 @@ const Atlanta = (props) => {
 
 
         return (
-            <div>
+            <div className="city">
                 <h1 className="cityHead"><b>The Real Housewives of Atlanta 🍑</b></h1>
                 <div className="vidIntroPanel">
                     <div className="vid">
@@ -39,9 +39,11 @@ const Atlanta = (props) => {
                         <h2 className="welcomeCity">Welcome to Atlanta. This franchise first premiered on Bravo in October of 2008, and our lives have never been the same.</h2>
                     </div>
                 </div>
-                <ul className="city-wives">
-                    {content}
-                </ul>
+                <div className="grid">
+                    <ul className="city-wives">
+                        {content}
+                    </ul>
+                </div>
             </div>
         )
     }

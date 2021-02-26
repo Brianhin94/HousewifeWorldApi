@@ -27,7 +27,7 @@ const NewJersey = (props) => {
 
 
         return (
-            <div>
+            <div className="city">
                 <h1 className="cityHead"><b>The Real Housewives of New Jersey 🍷🍝</b></h1>
                 <div className="vidIntroPanel">
                     <div className="vid">
@@ -36,12 +36,19 @@ const NewJersey = (props) => {
                         />
                     </div>
                     <div className="cityIntro">
-                        <h2 className="welcomeCity">Welcome to Jersey, friends. Where the tans are orange and the vocabulary is elementary. This franchise first premiered on Bravo in May of 2009, and our lives have never been the same.</h2>
+                        <h2 className="welcomeCity">Welcome to Jersey, friends. Where the tans are orange and the vocabulary is elementary. This franchise first premiered on Bravo in May of 2009, and our love for Jersey has only grown since.</h2>
+                        <h3 className="welcomeCity">🍷 From Prostitution Whores and flipping tables on said PW's, to glases being thrown and husbands in the pool.</h3>
+                        <h3 className="welcomeCity">🍷 From the families who feud, to the families that are thick as thieves.</h3>
+                        <h3 className="welcomeCity">🍷 Just know...</h3>
+                        <h3 className="welcomeCity">🍷 You can change your face, you can change your address, you can change your clothes, but you haven't changed your soul.</h3>
+                        <h3 className="welcomeCity">🍷 You can change your name, but you're still that Beverly inside.</h3>
                     </div>
                 </div>
-                <ul className="city-wives">
-                    {content}
-                </ul>
+                <div className="grid">
+                    <ul className="city-wives">
+                        {content}
+                    </ul>
+                </div>
             </div>
         )
     }
