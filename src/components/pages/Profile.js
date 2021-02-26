@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
 
+
 const Profile = (props) => {
     const [message, setMessage] = useState('Loading msg...');
 

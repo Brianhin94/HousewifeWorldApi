@@ -6,12 +6,10 @@ body {
   background: rgb(43,197,184);
   background: linear-gradient(100deg, rgba(43,197,184,1) 0%, rgba(255,255,255,0.2511379551820728) 50%, rgba(43,197,184,1) 100%);
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .nav-link {
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
@@ -20,13 +18,11 @@ code {
   padding: .25em;
   font-weight: 700;
 }
-
 .nav-link:hover {
   color: #B0B2B6;
   /* border-bottom: 1px solid #030327; */
   cursor: pointer;
 }
-
 .nav-primary {
   display: flex;
   align-items: center;
@@ -35,7 +31,6 @@ code {
   position: relative;
   padding-right: 30px;
 }
-
 .nav-preauth {
   display: flex;
   align-items: center;
@@ -43,7 +38,6 @@ code {
   padding: 0 20px;
   position: relative;
 }
-
 .auth-panel {
   display: flex;
   flex-direction: row;
@@ -53,24 +47,15 @@ code {
   margin: 0 auto;
   text-align: left;
 }
-
-/* .form-elem {
-  width: 50%;
-  display: inline-block;
-  min-width:200px;
-} */
-
 .devs {
   text-align: center;
   font-size: 60px;
 }
-
 .meet-devs {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
 .devPar {
   font-size: 20
 }
@@ -86,7 +71,6 @@ code {
   width: 65px;
   height: 49px;
 }
-
 /* .auth-btn {
   color: #000;
   border-radius: 15.5px;
@@ -99,31 +83,26 @@ code {
   letter-spacing: -.2px;
   cursor: pointer;
 } */
-
 .main-header {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 50px;
 }
-
 .main-instruct {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
 }
-
 .main-p {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
 }
-
 .map {
   border: 3px #393F49;
 }
-
 ul.cities-list {
   list-style: none;
   margin: auto;
@@ -132,12 +111,10 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .bullet {
   width: 40px;
   height: 40px;
 }
-
 .crown-atlanta {
   height: 20px;
   width: 25px;
@@ -176,7 +153,6 @@ ul.cities-list {
   margin-left: 100px;
   margin-right: 100px;
 }
-
 .atlWivesList {
   margin: auto;
   display: flex;
@@ -184,7 +160,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .atlWivesImg {
   margin: auto;
   display: flex;
@@ -193,7 +168,6 @@ ul.cities-list {
   flex-direction: column;
   border: 3px #393F49;
 }
-
 .bevWivesList {
   margin: auto;
   display: flex;
@@ -204,7 +178,6 @@ ul.cities-list {
   justify-content: space-around;
 
 }
-
 .bevWivesImg {
   margin: auto;
   display: flex;
@@ -215,7 +188,6 @@ ul.cities-list {
   justify-content: space-around;
   border: 3px #393F49;
 }
-
 .dalWivesList {
   margin: auto;
   display: flex;
@@ -223,7 +195,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .dalWivesImg {
   margin: auto;
   display: flex;
@@ -231,7 +202,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .jerseyWivesList {
   margin: auto;
   display: flex;
@@ -239,7 +209,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .jerseyWivesImg {
   margin: auto;
   display: flex;
@@ -247,7 +216,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .nycWivesList {
   margin: auto;
   display: flex;
@@ -255,7 +223,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .nycWivesImg {
   margin: auto;
   display: flex;
@@ -263,7 +230,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .ocWivesList {
   margin: auto;
   display: flex;
@@ -271,7 +237,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .ocWivesImg {
   margin: auto;
   display: flex;
@@ -279,7 +244,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .potWivesList {
   margin: auto;
   display: flex;
@@ -287,7 +251,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .potWivesImg {
   margin: auto;
   display: flex;
@@ -295,7 +258,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .slcWivesList {
   margin: auto;
   display: flex;
@@ -303,7 +265,6 @@ ul.cities-list {
   flex-direction: row;
   flex-direction: column;
 }
-
 .slcWivesImg {
   margin: auto;
   display: flex;
