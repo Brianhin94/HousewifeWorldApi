@@ -5,12 +5,12 @@ const Housewifemuseum = (props) => {
     let crown = '/images/crown.png';
     return (
         <div className="container">
-            <h1>Welcome to the Real Museum of Real Housewives</h1>
-            <h2>Do you love Bravo as much as we do? Of course you do.</h2>
-            <h3>Hit the crown icon on each city to virtually transport you to your favorite Bravo cities</h3>
-            <h3>so you can visit with your favorite (and least favorite...looking at you, Candiace Dillard-Bassett) housewives.</h3>
+            <h1 className="main-header">Welcome to the Real Museum of Real Housewives</h1>
+            <h2 className="main-p">Do you love Bravo as much as we do? Of course you do. Why else would you be here?</h2> <br></br>
+            <h3 className="main-instruct">Click on our STUNNING map below if you'd like to be directed to the bravotv.com webpage, where you can watch full episodes.</h3>
+            <h3 className="main-instruct">Hit the crown icon on each city to virtually transport you to your favorite Bravo cities so you can visit with your favorite, <br></br> and least favorite (<i>looking at you, Candiace Dillard-Bassett</i>), housewives.</h3> <br></br>
             <div className="bravo-map">
-                <iframe width="768" height="576" src="https://maphub.net/embed/126829?legend=1&panel=1&panel_closed=1" style={{frameBorder: 0}}></iframe>
+                <iframe className="map" width="768" height="576" src="https://maphub.net/embed/126829?legend=1&panel=1&panel_closed=1" style={{frameBorder: 0}}></iframe>
             </div>
             <div className="home-cities">
                 <ul className="cities-list">
