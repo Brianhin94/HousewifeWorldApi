@@ -21,7 +21,16 @@ const NewJersey = (props) => {
     } else {
         let content = jersey.db.map((jerseyWives, i) => {
             return (
-                <li className="jerseyWivesList" key={`jerseyWives-${i}`}> <img className="jerseyWivesImg" src={jerseyWives.img_url} /> {jerseyWives.first_name} {jerseyWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+                <li className="jerseyWivesList" key={`jerseyWives-${i}`}> 
+                    <img className="jerseyWivesImg" src={jerseyWives.img_url} /> 
+                    {jerseyWives.first_name} {jerseyWives.last_name} 
+                    <form method="POST" action="/profile">
+                        <input hidden type="text" name="first_name" value="{jerseyWives.first_name}"/>
+                        <input hidden type="text" name="last_name" value="{jerseyWives.last_name"/>
+                        <input hidden type="text" name="img_url" value="{jerseyWives.img_url}"/>
+                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form> 
+                </li>
             )
         })
 

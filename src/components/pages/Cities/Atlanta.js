@@ -21,7 +21,16 @@ const Atlanta = (props) => {
     } else {
         let content = atlanta.db.map((atlWives, i) => {
             return (
-                <li className="atlWivesList" key={`atlWives-${i}`}> <img className="atlWivesImg" src={atlWives.img_url} /> {atlWives.first_name} {atlWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+                <li className="atlWivesList" key={`atlWives-${i}`}> 
+                    <img className="atlWivesImg" src={atlWives.img_url} /> 
+                    {atlWives.first_name} {atlWives.last_name} 
+                    <form method="POST" action="/profile">
+                        <input hidden type="text" name="first_name" value="{atlWives.first_name}"/>
+                        <input hidden type="text" name="last_name" value="{atlWives.last_name"/>
+                        <input hidden type="text" name="img_url" value="{atlWives.img_url}"/>
+                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form> 
+                </li>
             )
         })
 

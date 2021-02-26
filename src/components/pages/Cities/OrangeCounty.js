@@ -21,7 +21,17 @@ const OrangeCounty = (props) => {
     } else {
         let content = orange.db.map((ocWives, i) => {
             return (
-                <li className="ocWivesList" key={`ocWives-${i}`}> <img className="ocWivesImg" src={ocWives.img_url} /> {ocWives.first_name} {ocWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+                <li className="ocWivesList" key={`ocWives-${i}`}> 
+                    <img className="ocWivesImg" src={ocWives.img_url} /> 
+                    {ocWives.first_name} 
+                    {ocWives.last_name} 
+                    <form method="POST" action="/profile">
+                        <input hidden type="text" name="first_name" value="{ocWives.first_name}"/>
+                        <input hidden type="text" name="last_name" value="{ocWives.last_name"/>
+                        <input hidden type="text" name="img_url" value="{ocWives.img_url}"/>
+                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form> 
+                </li>
             )
         })
 
