@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
 
+
 const Profile = (props) => {
     const [message, setMessage] = useState('Loading msg...');
 
@@ -23,6 +24,8 @@ const Profile = (props) => {
             <h1>WELCOME TO YOUR PROFILE PAGE, FUTURE HOUSEWIFE.</h1>
             <h2>Yes I'm talking to you, Queen!</h2>
             <h4>{message}</h4>
+
+
         </div>
     );
 }
