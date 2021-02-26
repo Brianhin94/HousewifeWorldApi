@@ -5,7 +5,7 @@ const Housewifemuseum = (props) => {
     let crown = '/images/crown.png';
     return (
         <div className="container">
-            <h1>Welcome to the Real Museum of Real Housewives</h1>
+            <h1>Welcomee to the Real Museum of Real Housewives</h1>
             <h2>Do you love Bravo as much as we do? Of course you do.</h2>
             <h3>Hit the crown icon on each city to virtually transport you to your favorite Bravo cities</h3>
             <h3>so you can visit with your favorite (and least favorite...looking at you, Candiace Dillard-Bassett) housewives.</h3>
