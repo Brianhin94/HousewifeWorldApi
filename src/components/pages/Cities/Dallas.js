@@ -21,7 +21,17 @@ const Dallas = (props) => {
     } else {
         let content = dallas.db.map((dalWives, i) => {
             return (
-                <li className="dalWivesList" key={`dalWives-${i}`}> <img className="dalWivesImg" src={dalWives.img_url} /> {dalWives.first_name} {dalWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+                <li className="dalWivesList" key={`dalWives-${i}`}> 
+                    <img className="dalWivesImg" src={dalWives.img_url} /> 
+                    {dalWives.first_name} 
+                    {dalWives.last_name} 
+                    <form method="POST" action="/profile">
+                        <input hidden type="text" name="first_name" value="{dalWives.first_name}"/>
+                        <input hidden type="text" name="last_name" value="{dalWives.last_name"/>
+                        <input hidden type="text" name="img_url" value="{dalWives.img_url}"/>
+                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form> 
+                </li>
             )
         })
 
