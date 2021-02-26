@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import ReactPlayer from "react-player";
+import Fave from '../../Fave';
 
 
 const Atlanta = (props) => {
+    const [isShown, setIsShown] = useState(false);
     console.log(props)
     const [atlanta, setAtlanta] = useState([]);
     const bravoUrl = (`${process.env.REACT_APP_BRAVO_API}searchcity?city=Atlanta`)
@@ -22,7 +24,17 @@ const Atlanta = (props) => {
         let content = atlanta.db.map((atlWives, i) => {
             return (
                 <li className="atlWivesList" key={`atlWives-${i}`}> 
-                    <img className="atlWivesImg" src={atlWives.img_url} /> 
+                    <img 
+                        className="atlWivesImg" 
+                        src={atlWives.img_url} 
+                        onMouseEnter={() => setIsShown(true)}
+                        onMouseLeave={() => setIsShown(false)}
+                    />
+                    {isShown && (
+                        <div>
+                            <Fave />
+                        </div>
+                    )} 
                     {atlWives.first_name} {atlWives.last_name} 
                     <form method="POST" action="/profile">
                         <input hidden type="text" name="first_name" value="{atlWives.first_name}"/>
