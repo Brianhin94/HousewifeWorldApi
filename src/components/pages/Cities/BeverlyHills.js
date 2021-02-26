@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 
 const BeverlyHills = (props) => {
 
@@ -8,11 +9,11 @@ const BeverlyHills = (props) => {
     useEffect(() => {
         console.log(bravoUrl)
         fetch(bravoUrl)
-        .then(response => response.json())
-        .then(jsonData => {
-            setBeverly((jsonData))
-            console.log(jsonData)
-        })
+            .then(response => response.json())
+            .then(jsonData => {
+                setBeverly((jsonData))
+                console.log(jsonData)
+            })
     }, [])
 
     if (beverly.length < 1) {
@@ -20,19 +21,37 @@ const BeverlyHills = (props) => {
     } else {
         let content = beverly.db.map((bevWives, i) => {
             return (
-                <li className="bevWivesList" key={`bevWives-${i}`}> <img className="bevWivesImg" src={bevWives.img_url}/> {bevWives.first_name} {bevWives.last_name}  </li>
-        )})
-    
+                <li className="bevWivesList" key={`bevWives-${i}`}> <img className="bevWivesImg" src={bevWives.img_url} /> {bevWives.first_name} {bevWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+            )
+        })
 
-    return (
-        <div>
-            <h1>The Real Housewives of Beverly Hills</h1>
-            <ul className="city-wives">
-                {content}
-            </ul>
-        </div>
-    )
-  }
+
+        return (
+            <div>
+                <h1 className="cityHead"><b>The Real Housewives of Beverly Hills 💎</b></h1>
+                <div className="vidIntroPanel">
+                    <div className="vid">
+                        <ReactPlayer
+                            url="https://www.youtube.com/watch?v=Xd6loa0AsAs&t=37s"
+                        />
+                    </div>
+                    <div className="cityIntro">
+                        <h2 className="welcomeCity">Welcome to Beverly Hills, dahhling (said in LVP voice, of course). This franchise first premiered on Bravo in October of 2010, and our lives have never been the same.</h2>
+                        <h3 className="welcomeCity">From Kyle stealing Kim's god damn house, to things getting a little too real inside Taylor Armstrong's world.</h3>
+                        <h3 className="welcomeCity">From feeling sorry for "slut pig" Brandi Glanville to wanting her permanently off our screens.</h3>
+                        <h3 className="welcomeCity">From loving our favorite duo, to GOODBYE KYLE.</h3>
+                        <h3 className="welcomeCity">And let's not forget Lucy Lucy Apple Goosey and wondering if Denise Richards really did f*ck Brandi Glanville.</h3>
+                        <h3 className="welcomeCity">These ladies have given us all the glam, drama, and then some.</h3>
+                    </div>
+                </div>
+                <div className="grid">
+                    <ul className="city-wives">
+                        {content}
+                    </ul>
+                </div>
+            </div>
+        )
+    }
 };
 
 export default BeverlyHills;
