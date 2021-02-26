@@ -21,7 +21,17 @@ const SaltlakeCity = (props) => {
     } else {
         let content = salt.db.map((slcWives, i) => {
             return (
-                <li className="slcWivesList" key={`slcWives-${i}`}> <img className="slcWivesImg" src={slcWives.img_url} /> {slcWives.first_name} {slcWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+                <li className="slcWivesList" key={`slcWives-${i}`}> 
+                    <img className="slcWivesImg" src={slcWives.img_url} /> 
+                    {slcWives.first_name} 
+                    {slcWives.last_name} 
+                    <form method="POST" action="/profile">
+                        <input hidden type="text" name="first_name" value="{slcWives.first_name}"/>
+                        <input hidden type="text" name="last_name" value="{slcWives.last_name"/>
+                        <input hidden type="text" name="img_url" value="{slcWives.img_url}"/>
+                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form> 
+                </li>
             )
         })
 

@@ -21,7 +21,17 @@ const NewYork = (props) => {
     } else {
         let content = york.db.map((nycWives, i) => {
             return (
-                <li className="nycWivesList" key={`nycWives-${i}`}> <img className="nycWivesImg" src={nycWives.img_url} /> {nycWives.first_name} {nycWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+                <li className="nycWivesList" key={`nycWives-${i}`}> 
+                    <img className="nycWivesImg" src={nycWives.img_url} /> 
+                    {nycWives.first_name} 
+                    {nycWives.last_name} 
+                    <form method="POST" action="/profile">
+                        <input hidden type="text" name="first_name" value="{nycWives.first_name}"/>
+                        <input hidden type="text" name="last_name" value="{nycWives.last_name"/>
+                        <input hidden type="text" name="img_url" value="{nycWives.img_url}"/>
+                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form>
+                </li>
             )
         })
 

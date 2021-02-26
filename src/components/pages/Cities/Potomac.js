@@ -21,7 +21,17 @@ const Potomac = (props) => {
     } else {
         let content = potomac.db.map((potWives, i) => {
             return (
-                <li className="potWivesList" key={`potWives-${i}`}> <img className="potWivesImg" src={potWives.img_url} /> {potWives.first_name} {potWives.last_name} <button className="faveBtn" type="submit">ADD TO FAVORITES</button> </li>
+                <li className="potWivesList" key={`potWives-${i}`}> 
+                    <img className="potWivesImg" src={potWives.img_url} /> 
+                    {potWives.first_name} 
+                    {potWives.last_name} 
+                    <form method="POST" action="/profile">
+                        <input hidden type="text" name="first_name" value="{potWives.first_name}"/>
+                        <input hidden type="text" name="last_name" value="{potWives.last_name"/>
+                        <input hidden type="text" name="img_url" value="{potWives.img_url}"/>
+                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form> 
+                </li>
             )
         })
 
