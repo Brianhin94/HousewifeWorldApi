@@ -33,7 +33,7 @@ const BeverlyHills = (props) => {
                         data-info={JSON.stringify(bevWives)}
                         onMouseOver={handleMouseOver}
                         />
-                        {<Fave />}
+            {<Fave />}
                         <p className="wifeName"> {bevWives.first_name} {bevWives.last_name}</p>
                     <form method="POST" action="/profile">
                         <input hidden type="text" name="first_name" value="{bevWives.first_name}" />

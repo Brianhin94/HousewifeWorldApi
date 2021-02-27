@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import ReactPlayer from "react-player";
 import Fave from '../../Fave';
-
+import axios from 'axios';
+import HousewifeCard from '../../partials/HousewifeCard';
 
 const Atlanta = (props) => {
     const [isShown, setIsShown] = useState(false);
@@ -18,6 +19,20 @@ const Atlanta = (props) => {
             })
     }, [])
 
+    const [favorite, setFavorite] = useState('')
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        axios.post('/profile' , favorite)
+        .then(response => {
+          response.json()
+          console.log(response)
+        }) 
+        .then(jsonData => {
+          setFavorite((jsonData))
+        })
+      }
+
     if (atlanta.length < 1) {
         return (<h4>Content is loading</h4>)
     } else {
@@ -33,6 +48,7 @@ const Atlanta = (props) => {
                     />
                     {isShown && (
                         <div>
+                        <HousewifeCard />
                             <Fave />
                         </div>
                     )} 

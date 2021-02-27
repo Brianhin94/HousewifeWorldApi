@@ -25,9 +25,9 @@ const Dallas = (props) => {
                     <img className="dalWivesImg" src={dalWives.img_url} /> 
                     <p className="wifeName">{dalWives.first_name} {dalWives.last_name}</p>
                     <form method="POST" action="/profile">
-                        <input hidden type="text" name="first_name" value="{dalWives.first_name}"/>
-                        <input hidden type="text" name="last_name" value="{dalWives.last_name"/>
-                        <input hidden type="text" name="img_url" value="{dalWives.img_url}"/>
+                        <input hidden type="text" name={dalWives.first_name} value={dalWives.first_name}/>
+                        <input hidden type="text" name={dalWives.last_name} value={dalWives.last_name}/>
+                        <input hidden type="text" name={dalWives.img_url} value={dalWives.img_url}/>
                         <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
                     </form> 
                 </li>
