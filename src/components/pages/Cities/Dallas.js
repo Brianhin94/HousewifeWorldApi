@@ -18,7 +18,17 @@ const Dallas = (props) => {
                 console.log(jsonData)
             })
     }, [])
-
+    const handleClick = (e) => {
+        e.preventDefault()
+        axios.post('/profile' , favePost)
+        .then(response => {
+          response.json()
+          console.log(response)
+        }) 
+        .then(jsonData => {
+          favePost((jsonData))
+        })
+      }
 
     let favePost = (e) => {
         e.preventDefault();
