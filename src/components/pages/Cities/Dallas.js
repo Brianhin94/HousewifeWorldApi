@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
+import jwt_decode from 'jwt-decode';
+import { Redirect } from 'react-router-dom'
 
 const Dallas = (props) => {
-
+    const [data, setData] = useState({});
     const [dallas, setDallas] = useState([]);
     const bravoUrl = (`${process.env.REACT_APP_BRAVO_API}searchcity?city=Dallas`)
-
+    const [redirect, setRedirect] = useState(false)
     useEffect(() => {
         console.log(bravoUrl)
         fetch(bravoUrl)
@@ -16,20 +19,55 @@ const Dallas = (props) => {
             })
     }, [])
 
+
+    let favePost = (e) => {
+        e.preventDefault();
+      //  console.log(e)
+        const decoded = jwt_decode(localStorage.getItem('jwtToken'));
+      //  console.log(decoded)
+        let data = ({
+            first_name: e.target.form[0].defaultValue,
+            last_name: e.target.form[1].defaultValue,
+            img_url: e.target.form[2].defaultValue
+        }
+        )
+        axios.post(`${process.env.REACT_APP_SERVER_URL}` + "/user/profile", data, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': decoded
+            }
+            //
+        })
+        //console.log("axios-post")
+        .then(response => {
+                console.log("hello redirect true!")
+              //  setRedirect(true)
+            }
+            )
+            //console.log("after.then")
+            setRedirect(true)
+    }
+
+
+    if (redirect === true) {
+        return <Redirect to='/profile' />
+    }
+
+
     if (dallas.length < 1) {
         return (<h4>Content is loading</h4>)
     } else {
         let content = dallas.db.map((dalWives, i) => {
             return (
-                <li className="dalWivesList" key={`dalWives-${i}`}> 
-                    <img className="dalWivesImg" src={dalWives.img_url} /> 
+                <li className="dalWivesList" key={`dalWives-${i}`}>
+                    <img className="dalWivesImg" src={dalWives.img_url} />
                     <p className="wifeName">{dalWives.first_name} {dalWives.last_name}</p>
-                    <form method="POST" action="/profile">
-                        <input hidden type="text" name={dalWives.first_name} value={dalWives.first_name}/>
-                        <input hidden type="text" name={dalWives.last_name} value={dalWives.last_name}/>
-                        <input hidden type="text" name={dalWives.img_url} value={dalWives.img_url}/>
-                        <button class="faveBtn" type="submit">ADD TO FAVORITES</button>
-                    </form> 
+                    <form>
+                        <input hidden type="text" name="first_name" value={dalWives.first_name} />
+                        <input hidden type="text" name="last_name" value={dalWives.last_name} />
+                        <input hidden type="text" name="img_url" value={dalWives.img_url} />
+                        <button onClick={(e) => favePost(e) } class="faveBtn" type="submit">ADD TO FAVORITES</button>
+                    </form>
                 </li>
             )
         })
